@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #87CEEB;
+}
+
+.game-container {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    height: 667px;
+    overflow: hidden;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #87CEEB;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('DALL·E\ 2024-11-29\ 00.51.40\ -\ A\ lighter\ version\ of\ the\ original\ vibrant\ and\ cartoonish\ 4K\ background\ for\ a\ flappy\ game.\ The\ scene\ features\ a\ soft\ blue\ sky\ with\ subtle\,\ light\ clouds.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.bird {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 40%;
+    left: 10%;
+    border-top-left-radius: 25px;
+    z-index: 10;
+    transition: transform 0.1s;
+}
+
+.pipe_sprite {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 50px;
+   
+    background-image: url(pipe\ \(1\).png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.pipe_sprite.bottom {
+    top: auto;
+    bottom: 0;
+}
+
+.message {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    z-index: 10;
+}
+
+.score {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 183, 0);
+    z-index: 10;
+}
+
+.restart-button {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .bird {
+        height: 40px;
+        width: 40px;
+    }
+
+    .pipe_sprite {
+        width: 40px;
+    }
+
+    .score {
+        font-size: 18px;
+    }
+
+    .message {
+        font-size: 18px;
+    }
+
+    .restart-button {
+        font-size: 14px;
+        padding: 8px 16px;
+        bottom: 80px;
+    }
+}

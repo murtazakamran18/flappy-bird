@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Game Container -->
+    <div class="game-container">
+        <div class="background"></div>
+        <img class="bird" src="pngegg.png" alt="bird-img">
+        <div class="message">
+            Press Space or Touch To Start Game
+        </div>
+        <div class="score">
+            <span class="score_title">Score:</span>
+            <span class="score_val">0</span>
+        </div>
+        <button class="restart-button">Restart</button>
+    </div>
+
+    <!-- Sound Effects -->
+    <audio id="jump-sound" src="mixkit-player-jumping-in-a-video-game-2043 (mp3cut.net).wav" preload="auto"></audio>
+    <audio id="gameover-sound" src="mixkit-arcade-retro-game-over-213.wav" preload="auto"></audio>
+    <audio id="score-sound" src="mixkit-arcade-score-interface-217 (mp3cut.net).wav" preload="auto"></audio>
+
+    <script src="script.js"></script>
+    <script>
+        // Wait for the image to load
+        const image = document.getElementById("");
+        image.onload = () => {
+          // Get original dimensions
+          const originalWidth = image.naturalWidth;
+          const originalHeight = image.naturalHeight;
+    
+          // Display dimensions
+          document.getElementById("dimensions").textContent = 
+            `Original Dimensions: ${originalWidth}px × ${originalHeight}px`;
+        };
+      </script>
+</body>
+
+</html>
